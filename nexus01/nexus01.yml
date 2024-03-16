@@ -11,12 +11,10 @@ topology:
 
     sw-1:
       kind: cisco_n9kv
-      #cpu: 2
       startup-config: sw-1.txt
 
     host-a:
       kind: linux
-      cpu: 0.5
       binds:
         - host-a.txt:/etc/network/interfaces
 

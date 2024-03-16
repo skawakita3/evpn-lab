@@ -1,0 +1,20 @@
+interface Ethernet1/3
+ no switchport
+ ip address 10.12.14.2/24
+ no shutdown
+
+interface Ethernet1/6
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+
+interface Ethernet1/52
+ no switchport
+ ip address 10.12.15.2/24
+ no shutdown
+
+interface Ethernet1/1-2, Ethernet1/4-5, Ethernet1/7-51, Ethernet1/53-64
+ shutdown
+
+interface loopback0
+ ip address 10.1.1.12/32

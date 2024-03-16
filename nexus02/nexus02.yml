@@ -1,0 +1,49 @@
+name: nexus02
+
+topology:
+  kinds:
+    cisco_n9kv:
+      image: 129249267917.dkr.ecr.us-east-1.amazonaws.com/vrnetlab/vr-n9kv:9.3.13
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    sw-1:
+      kind: cisco_n9kv
+      startup-config: sw-1.txt
+      
+    sw-2:
+      kind: cisco_n9kv
+      startup-config: sw-2.txt
+
+    sw-4:
+      kind: cisco_n9kv
+      startup-config: sw-4.txt
+
+    sw-5:
+      kind: cisco_n9kv
+      startup-config: sw-5.txt
+      
+    host-a:
+      kind: linux
+      binds:
+        - host-a.txt:/etc/network/interfaces
+
+    host-b:
+      kind: linux
+      binds:
+        - host-b.txt:/etc/network/interfaces
+
+    host-c:
+      kind: linux
+      binds:
+        - host-c.txt:/etc/network/interfaces
+
+  links:
+    - endpoints: ["sw-1:eth5", "sw-4:eth5"]
+    - endpoints: ["sw-1:eth7", "host-b:eth1"]
+    - endpoints: ["sw-1:eth8", "host-a:eth1"]
+    - endpoints: ["sw-1:eth53", "sw-5:eth5"]
+    - endpoints: ["sw-2:eth3", "sw-4:eth7"]
+    - endpoints: ["sw-2:eth6", "host-c:eth1"]
+    - endpoints: ["sw-2:eth52", "sw-5:eth4"]
