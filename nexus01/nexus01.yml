@@ -3,7 +3,7 @@ name: nexus01
 topology:
   kinds:
     cisco_n9kv:
-      image: 129249267917.dkr.ecr.us-east-1.amazonaws.com/vrnetlab/vr-n9kv:9.3.13
+      image: ${IMAGE_REPO}vrnetlab/vr-n9kv:9.3.13
     linux:
       image: ghcr.io/hellt/network-multitool
 
