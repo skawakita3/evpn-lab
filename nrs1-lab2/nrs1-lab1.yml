@@ -1,0 +1,79 @@
+name: nrs1-lab2
+
+topology:
+  kinds:
+    vr-sros:
+      image: ${IMAGE_REPO}vrnetlab/vr-sros:23.10.R1
+
+  nodes:
+    r1:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt # Not included in the lab, ask your Nokia representative
+      startup-config: r1.partial.cfg
+       
+    r2:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r2.partial.cfg
+
+    r3:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r3.partial.cfg
+
+    r4:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r4.partial.cfg
+
+    r5:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r5.partial.cfg
+
+    r6:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r6.partial.cfg
+
+    r7:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r7.partial.cfg
+
+    r8:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r8.partial.cfg
+
+    r9:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r9.partial.cfg
+
+    r10:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r10.partial.cfg
+
+    r11:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r11.partial.cfg
+
+    r12:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r12.partial.cfg
