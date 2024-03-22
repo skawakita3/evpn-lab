@@ -1,0 +1,79 @@
+name: nrs1-lab
+
+topology:
+  kinds:
+    vr-sros:
+      image: ${IMAGE_REPO}vrnetlab/vr-sros:23.10.R1
+
+  nodes:
+    r1:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt # Not included in the lab, ask your Nokia representative
+      startup-config: r1.cfg
+       
+    r2:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r2.cfg
+
+    r3:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r3.cfg
+
+    r4:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r4.cfg
+
+    r5:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r5.cfg
+
+    r6:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r6.cfg
+
+    r7:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r7.cfg
+
+    r8:
+      kind: vr-sros
+      type: sr-1s
+      license: vr-sros-license.txt
+      startup-config: r8.cfg
+
+    r9:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r9.cfg
+
+    r10:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r10.cfg
+
+    r11:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r11.cfg
+
+    r12:
+      kind: vr-sros
+      type: ixr-s
+      license: vr-sros-license.txt
+      startup-config: r12.cfg

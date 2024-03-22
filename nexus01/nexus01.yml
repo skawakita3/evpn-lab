@@ -8,7 +8,6 @@ topology:
       image: ghcr.io/hellt/network-multitool
 
   nodes:
-
     sw-1:
       kind: cisco_n9kv
       startup-config: sw-1.txt
