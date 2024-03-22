@@ -1,4 +1,4 @@
-name: nrs1-lab2
+name: nrs1-lab3
 
 topology:
   kinds:
@@ -8,49 +8,49 @@ topology:
   nodes:
     r1:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt # Not included in the lab, ask your Nokia representative
       startup-config: r1.partial.cfg
        
     r2:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r2.partial.cfg
 
     r3:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r3.partial.cfg
 
     r4:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r4.partial.cfg
 
     r5:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r5.partial.cfg
 
     r6:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r6.partial.cfg
 
     r7:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r7.partial.cfg
 
     r8:
       kind: vr-sros
-      type: sr-1s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r8.partial.cfg
 
