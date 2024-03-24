@@ -56,25 +56,25 @@ topology:
 
     r9:
       kind: vr-sros
-      type: ixr-s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r9.partial.cfg
 
     r10:
       kind: vr-sros
-      type: ixr-s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r10.partial.cfg
 
     r11:
       kind: vr-sros
-      type: ixr-s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r11.partial.cfg
 
     r12:
       kind: vr-sros
-      type: ixr-s
+      type: sr-1e
       license: vr-sros-license.txt
       startup-config: r12.partial.cfg
 
