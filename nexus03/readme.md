@@ -19,10 +19,11 @@ show bgp l2vpn evpn summary
 ## overlay l2 bridging
 ping 192.168.10.12 count unlimited interval 1
 show run vlan
-show vxlan
 show run interface nve 1
-show run | sec evpn
 show bgp l2vpn evpn summary
+show bgp l2vpn evpn
+show run | sec evpn
+show vxlan
 show nve interface 
-show mac address-table dynamic
 show nve vni
+show mac address-table dynamic
