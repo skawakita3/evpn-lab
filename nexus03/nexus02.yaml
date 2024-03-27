@@ -1,0 +1,67 @@
+name: nexus02
+
+topology:
+  kinds:
+    cisco_n9kv:
+      image: ${IMAGE_REPO:=}vrnetlab/vr-n9kv:9.3.13
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    sw-1:
+      kind: cisco_n9kv
+      startup-config: sw-1.cfg
+      
+    sw-2:
+      kind: cisco_n9kv
+      startup-config: sw-2.cfg
+
+    sw-3:
+      kind: cisco_n9kv
+      startup-config: sw-3.cfg
+
+    sw-4:
+      kind: cisco_n9kv
+      startup-config: sw-4.cfg
+
+    sw-5:
+      kind: cisco_n9kv
+      startup-config: sw-5.cfg
+      
+    host-a:
+      kind: linux
+      binds:
+        - host-a.cfg:/etc/network/interfaces
+
+    host-b:
+      kind: linux
+      binds:
+        - host-b.cfg:/etc/network/interfaces
+
+    host-c:
+      kind: linux
+      binds:
+        - host-c.cfg:/etc/network/interfaces
+
+    host-d:
+      kind: linux
+      binds:
+        - host-d.cfg:/etc/network/interfaces
+
+    host-e:
+      kind: linux
+      binds:
+        - host-e.cfg:/etc/network/interfaces
+
+  links:
+    - endpoints: ["sw-1:eth5", "sw-4:eth5"]
+    - endpoints: ["sw-1:eth7", "host-b:eth1"]
+    - endpoints: ["sw-1:eth8", "host-a:eth1"]
+    - endpoints: ["sw-1:eth53", "sw-5:eth5"]
+    - endpoints: ["sw-2:eth3", "sw-4:eth7"]
+    - endpoints: ["sw-2:eth5", "host-d:eth1"]
+    - endpoints: ["sw-2:eth6", "host-c:eth1"]
+    - endpoints: ["sw-2:eth52", "sw-5:eth4"]
+    - endpoints: ["sw-3:eth2", "sw-5:eth2"]
+    - endpoints: ["sw-3:eth3", "sw-4:eth53"]
+    - endpoints: ["sw-3:eth4", "host-e:eth1"]
