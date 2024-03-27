@@ -1,6 +1,6 @@
 # config
 underlay - control-plane - unicast: ibgp w/ ospf
-underlay - control-plane - bum: pim asm
+underlay - control-plane - bum: ir w/ ibgp
 overlay - control-plane: evpn w/ ibgp
 overlay - data-plane: vxlan w/ vlan
 
