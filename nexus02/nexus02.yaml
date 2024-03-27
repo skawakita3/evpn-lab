@@ -3,7 +3,7 @@ name: nexus02
 topology:
   kinds:
     cisco_n9kv:
-      image: ${IMAGE_REPO}vrnetlab/vr-n9kv:9.3.13
+      image: ${IMAGE_REPO:=}vrnetlab/vr-n9kv:9.3.13
     linux:
       image: ghcr.io/hellt/network-multitool
 
