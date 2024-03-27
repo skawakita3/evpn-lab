@@ -1,3 +1,9 @@
+# config
+underlay - control-plane - unicast: ibgp w/ ospf
+underlay - control-plane - bum: pim asm
+overlay - control-plane: evpn w/ ibgp
+overlay - data-plane: vxlan w/ vlan
+
 # show
 ## preparation
 show ip interface brief

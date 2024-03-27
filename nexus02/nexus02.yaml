@@ -10,48 +10,48 @@ topology:
   nodes:
     sw-1:
       kind: cisco_n9kv
-      startup-config: sw-1.txt
+      startup-config: sw-1.cfg
       
     sw-2:
       kind: cisco_n9kv
-      startup-config: sw-2.txt
+      startup-config: sw-2.cfg
 
     sw-3:
       kind: cisco_n9kv
-      startup-config: sw-3.txt
+      startup-config: sw-3.cfg
 
     sw-4:
       kind: cisco_n9kv
-      startup-config: sw-4.txt
+      startup-config: sw-4.cfg
 
     sw-5:
       kind: cisco_n9kv
-      startup-config: sw-5.txt
+      startup-config: sw-5.cfg
       
     host-a:
       kind: linux
       binds:
-        - host-a.txt:/etc/network/interfaces
+        - host-a.cfg:/etc/network/interfaces
 
     host-b:
       kind: linux
       binds:
-        - host-b.txt:/etc/network/interfaces
+        - host-b.cfg:/etc/network/interfaces
 
     host-c:
       kind: linux
       binds:
-        - host-c.txt:/etc/network/interfaces
+        - host-c.cfg:/etc/network/interfaces
 
     host-d:
       kind: linux
       binds:
-        - host-d.txt:/etc/network/interfaces
+        - host-d.cfg:/etc/network/interfaces
 
     host-e:
       kind: linux
       binds:
-        - host-e.txt:/etc/network/interfaces
+        - host-e.cfg:/etc/network/interfaces
 
   links:
     - endpoints: ["sw-1:eth5", "sw-4:eth5"]
