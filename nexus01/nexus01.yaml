@@ -10,12 +10,12 @@ topology:
   nodes:
     sw-1:
       kind: cisco_n9kv
-      startup-config: sw-1.txt
+      startup-config: sw-1.cfg
 
     host-a:
       kind: linux
       binds:
-        - host-a.txt:/etc/network/interfaces
+        - host-a.cfg:/etc/network/interfaces
 
   links:
     - endpoints: ["sw-1:eth8", "host-a:eth1"]
