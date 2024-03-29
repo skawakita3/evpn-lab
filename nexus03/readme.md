@@ -4,6 +4,10 @@ underlay - control-plane - bum: ir w/ ibgp
 overlay - control-plane: evpn w/ ibgp
 overlay - data-plane: vxlan w/ vlan
 
+## ref.
+Chap. 5: Single AS Model with OSPF Underlay
+VXLAN Fabric with BGP EVPN Control-Plane: Design Considerations
+
 # show
 ## preparation
 show ip interface brief
