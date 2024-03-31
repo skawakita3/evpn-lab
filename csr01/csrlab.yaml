@@ -1,0 +1,52 @@
+name: csrlab
+
+topology:
+  kinds:
+    cisco_csr1000v:
+      image: ${IMAGE_REPO:=}vrnetlab/vr-csr:17.03.02
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    pe1:
+      kind: cisco_csr1000v
+      #startup-config: pe1.cfg
+      
+    pe2:
+      kind: cisco_csr1000v
+      #startup-config: pe2.cfg
+
+    p3:
+      kind: cisco_csr1000v
+      #startup-config: p3.cfg
+
+    p4:
+      kind: cisco_csr1000v
+      #startup-config: p4.cfg
+
+    pe5:
+      kind: cisco_csr1000v
+      #startup-config: pe5.cfg
+      
+    ce1:
+      kind: linux
+      #binds:
+      #  - host-a.cfg:/etc/network/interfaces
+
+    ce2:
+      kind: linux
+      #binds:
+      #  - host-b.cfg:/etc/network/interfaces
+
+  #links:
+  #  - endpoints: ["sw-1:eth5", "sw-4:eth5"]
+  #  - endpoints: ["sw-1:eth7", "host-b:eth1"]
+  #  - endpoints: ["sw-1:eth8", "host-a:eth1"]
+  #  - endpoints: ["sw-1:eth53", "sw-5:eth5"]
+  #  - endpoints: ["sw-2:eth3", "sw-4:eth7"]
+  #  - endpoints: ["sw-2:eth5", "host-d:eth1"]
+  #  - endpoints: ["sw-2:eth6", "host-c:eth1"]
+  #  - endpoints: ["sw-2:eth52", "sw-5:eth4"]
+  #  - endpoints: ["sw-3:eth2", "sw-5:eth2"]
+  #  - endpoints: ["sw-3:eth3", "sw-4:eth53"]
+  #  - endpoints: ["sw-3:eth4", "host-e:eth1"]

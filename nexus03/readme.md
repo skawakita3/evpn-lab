@@ -2,7 +2,7 @@
 underlay - control-plane - unicast: ospf
 underlay - control-plane - bum: ir w/ ibgp
 overlay - control-plane: evpn w/ ibgp
-overlay - data-plane: vxlan w/ vlan
+overlay - data-plane: evpn w/ vxlan
 
 ## ref.
 Chap. 5: Single AS Model with OSPF Underlay
