@@ -16,30 +16,32 @@ topology:
       kind: cisco_csr1000v
       #startup-config: pe2.cfg
 
-    p3:
+    pe3:
       kind: cisco_csr1000v
-      #startup-config: p3.cfg
+      #startup-config: pe3.cfg
 
-    p4:
+    core:
       kind: cisco_csr1000v
-      #startup-config: p4.cfg
+      #startup-config: core.cfg
 
-    pe5:
-      kind: cisco_csr1000v
-      #startup-config: pe5.cfg
-      
     ce1:
-      kind: linux
-      #binds:
-      #  - host-a.cfg:/etc/network/interfaces
+      kind: cisco_csr1000v
+      #startup-config: core.cfg
 
     ce2:
-      kind: linux
-      #binds:
-      #  - host-b.cfg:/etc/network/interfaces
+      kind: cisco_csr1000v
+      #startup-config: core.cfg
+
+    ce3:
+      kind: cisco_csr1000v
+      #startup-config: core.cfg
+
+    ce4:
+      kind: cisco_csr1000v
+      #startup-config: core.cfg
 
   links:
-    - endpoints: ["pe5:eth10", "ce2:eth1"]
+    - endpoints: ["pe1:eth6", "ce1:eth5"]    # PE5:Gi2
   #  - endpoints: ["sw-1:eth7", "host-b:eth1"]
   #  - endpoints: ["sw-1:eth8", "host-a:eth1"]
   #  - endpoints: ["sw-1:eth53", "sw-5:eth5"]
