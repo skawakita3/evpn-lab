@@ -38,8 +38,8 @@ topology:
       #binds:
       #  - host-b.cfg:/etc/network/interfaces
 
-  #links:
-  #  - endpoints: ["sw-1:eth5", "sw-4:eth5"]
+  links:
+    - endpoints: ["pe5:eth10", "ce2:eth1"]
   #  - endpoints: ["sw-1:eth7", "host-b:eth1"]
   #  - endpoints: ["sw-1:eth8", "host-a:eth1"]
   #  - endpoints: ["sw-1:eth53", "sw-5:eth5"]
