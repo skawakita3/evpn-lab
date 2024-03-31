@@ -8,6 +8,10 @@ topology:
       image: ghcr.io/hellt/network-multitool
 
   nodes:
+    core:
+      kind: cisco_csr1000v
+      startup-config: core.cfg
+
     pe1:
       kind: cisco_csr1000v
       startup-config: pe1.cfg
@@ -20,25 +24,21 @@ topology:
       kind: cisco_csr1000v
       startup-config: pe3.cfg
 
-    core:
-      kind: cisco_csr1000v
-      startup-config: core.cfg
-
     ce1:
       kind: cisco_csr1000v
-      #startup-config: ce1.cfg
+      startup-config: ce1.cfg
 
     ce2:
       kind: cisco_csr1000v
-      #startup-config: ce2.cfg
+      startup-config: ce2.cfg
 
     ce3:
       kind: cisco_csr1000v
-      #startup-config: ce3.cfg
+      startup-config: ce3.cfg
 
     ce4:
       kind: cisco_csr1000v
-      #startup-config: ce4.cfg
+      startup-config: ce4.cfg
 
   links:
     - endpoints: ["pe1:eth1", "core:eth1"]    # PE1:Gi2 - Core:Gi2
