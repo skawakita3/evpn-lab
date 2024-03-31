@@ -10,7 +10,7 @@ topology:
   nodes:
     pe1:
       kind: cisco_csr1000v
-      #startup-config: pe1.cfg
+      startup-config: pe1.cfg
       
     pe2:
       kind: cisco_csr1000v
@@ -41,14 +41,12 @@ topology:
       #startup-config: core.cfg
 
   links:
-    - endpoints: ["pe1:eth6", "ce1:eth5"]    # PE5:Gi2
-  #  - endpoints: ["sw-1:eth7", "host-b:eth1"]
-  #  - endpoints: ["sw-1:eth8", "host-a:eth1"]
-  #  - endpoints: ["sw-1:eth53", "sw-5:eth5"]
-  #  - endpoints: ["sw-2:eth3", "sw-4:eth7"]
-  #  - endpoints: ["sw-2:eth5", "host-d:eth1"]
-  #  - endpoints: ["sw-2:eth6", "host-c:eth1"]
-  #  - endpoints: ["sw-2:eth52", "sw-5:eth4"]
-  #  - endpoints: ["sw-3:eth2", "sw-5:eth2"]
-  #  - endpoints: ["sw-3:eth3", "sw-4:eth53"]
-  #  - endpoints: ["sw-3:eth4", "host-e:eth1"]
+    - endpoints: ["pe1:eth1", "core:eth1"]    # PE1:Gi2 - Core:Gi2
+    - endpoints: ["pe1:eth5", "ce4:eth5"]    # PE1:Gi6 - CE4:Gi6
+    - endpoints: ["pe1:eth6", "ce1:eth5"]    # PE1:Gi7 - CE1:Gi6
+
+    - endpoints: ["pe2:eth1", "core:eth3"]    # PE2:Gi2 - Core:Gi4
+    - endpoints: ["pe2:eth4", "ce2:eth1"]    # PE2:Gi5 - CE2:Gi2
+
+    - endpoints: ["pe3:eth1", "core:eth2"]    # PE3:Gi2 - Core:Gi3
+    - endpoints: ["pe3:eth2", "ce3:eth3"]    # PE3:Gi3 - CE3:Gi4
