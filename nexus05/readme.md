@@ -2,7 +2,8 @@
 underlay - control-plane - unicast: ospf
 underlay - control-plane - bum: ir w/ ibgp
 overlay - control-plane: evpn w/ ibgp
-overlay - data-plane: evpn w/ mpls
+overlay - data-plane: evpn w/ vxlan
+multi-tier-leaf - spine - tier1 leaf - tier2 leaf
 
 # show
 ## preparation
