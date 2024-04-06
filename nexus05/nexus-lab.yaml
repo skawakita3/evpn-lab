@@ -24,6 +24,11 @@ topology:
       startup-config: sw-3.cfg
       group: leaf
 
+    sw-6:
+      kind: cisco_n9kv
+      startup-config: sw-6.cfg
+      group: leaf
+
     ### SPINES ###
     sw-4:
       kind: cisco_n9kv
@@ -86,11 +91,23 @@ topology:
           - ip a add 192.168.20.14/24 dev eth1
         group: server   
 
+    host-f:
+        kind: linux
+        binds:
+          - ./host-f.sh:/tmp/eth1.sh
+        exec:
+          - bash /tmp/eth1.sh
+          - ip link set eth1 address 00:00:00:00:ff:ff
+          - ip a add 192.168.10.15/24 dev eth1
+        group: server
+
   links:
     - endpoints: ["sw-1:eth5", "sw-4:eth5"]
     - endpoints: ["sw-1:eth7", "host-b:eth1"]
     - endpoints: ["sw-1:eth8", "host-a:eth1"]
     - endpoints: ["sw-1:eth53", "sw-5:eth5"]
+    - endpoints: ["sw-1:eth6", "sw-6:eth6"]
+    - endpoints: ["sw-6:eth9", "host-f:eth1"]
     - endpoints: ["sw-2:eth3", "sw-4:eth7"]
     - endpoints: ["sw-2:eth5", "host-d:eth1"]
     - endpoints: ["sw-2:eth6", "host-c:eth1"]
