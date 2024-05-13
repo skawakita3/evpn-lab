@@ -1,3 +1,6 @@
+# ref
+https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/mpls/b-mpls/m-ce-evpn-single-homing.html
+
 # config
 underlay - control-plane - unicast: ospf
 underlay - control-plane - bum: ir w/ ibgp

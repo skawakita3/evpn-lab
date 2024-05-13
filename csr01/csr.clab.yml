@@ -1,4 +1,5 @@
 name: csrlab
+prefix: ""
 
 topology:
   kinds:
